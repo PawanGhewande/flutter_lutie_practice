@@ -11,27 +11,57 @@ class HomePage extends StatelessWidget {
     return Scaffold(
       body: Center(
           child: Row(
-        mainAxisAlignment: MainAxisAlignment.center,
+        mainAxisAlignment: MainAxisAlignment.spaceAround,
         children: [
-          TextButton(
-            onPressed: () {
+          InkWell(
+            onTap: () {
               Navigator.of(context).push(
                 MaterialPageRoute(
                   builder: (context) => const Page1(),
                 ),
               );
             },
-            child: const Text('Page 1'),
+            child: Container(
+              decoration: const BoxDecoration(
+                  color: Colors.blue,
+                  borderRadius: BorderRadius.all(Radius.circular(18))),
+              child: Padding(
+                padding:
+                    const EdgeInsets.symmetric(horizontal: 35, vertical: 10),
+                child: Text(
+                  'Page 1',
+                  style: Theme.of(context)
+                      .textTheme
+                      .headline5
+                      ?.apply(color: Colors.white),
+                ),
+              ),
+            ),
           ),
-          TextButton(
-            onPressed: () {
+          InkWell(
+            onTap: () {
               Navigator.of(context).push(
                 MaterialPageRoute(
                   builder: (context) => const Page2(),
                 ),
               );
             },
-            child: const Text('Page 2'),
+            child: Container(
+              decoration: const BoxDecoration(
+                  color: Colors.blue,
+                  borderRadius: BorderRadius.all(Radius.circular(18))),
+              child: Padding(
+                padding:
+                    const EdgeInsets.symmetric(horizontal: 35, vertical: 10),
+                child: Text(
+                  'Page 2',
+                  style: Theme.of(context)
+                      .textTheme
+                      .headline5
+                      ?.apply(color: Colors.white),
+                ),
+              ),
+            ),
           )
         ],
       )),
