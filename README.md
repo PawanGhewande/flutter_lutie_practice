@@ -1,1 +1,1 @@
-# flutter_lutie_practice
+# flutter_lottie_practice
