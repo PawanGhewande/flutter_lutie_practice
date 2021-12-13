@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_lutie_practice/page1.dart';
 
+import 'page2.dart';
+
 class HomePage extends StatelessWidget {
   const HomePage({Key? key}) : super(key: key);
 
@@ -9,6 +11,7 @@ class HomePage extends StatelessWidget {
     return Scaffold(
       body: Center(
           child: Row(
+        mainAxisAlignment: MainAxisAlignment.center,
         children: [
           TextButton(
             onPressed: () {
@@ -21,8 +24,14 @@ class HomePage extends StatelessWidget {
             child: const Text('Page 1'),
           ),
           TextButton(
-            onPressed: () {},
-            child: const Text('Page 1'),
+            onPressed: () {
+              Navigator.of(context).push(
+                MaterialPageRoute(
+                  builder: (context) => const Page2(),
+                ),
+              );
+            },
+            child: const Text('Page 2'),
           )
         ],
       )),

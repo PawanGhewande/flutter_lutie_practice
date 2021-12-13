@@ -7,53 +7,69 @@ class Page1 extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: const Color(0xff3490dc),
       body: SafeArea(
-        child: Stack(
-          children: [
-            Container(
-              decoration: BoxDecoration(
-                  gradient: LinearGradient(
-                      begin: Alignment.topCenter,
-                      end: Alignment.bottomCenter,
-                      colors: [Color(0xFF), Color(0xff)])),
+        child: Container(
+          decoration: const BoxDecoration(
+            gradient: LinearGradient(
+              colors: [Color(0xFF0093E9), Color(0xFF80D0C7)],
             ),
-            Column(
-              children: [
-                Expanded(
-                  child: Center(
-                    child: Text(
-                      'Sample Text',
-                      style: Theme.of(context).textTheme.headline2?.apply(
-                            fontWeightDelta: 4,
-                          ),
+          ),
+          child: Stack(
+            children: [
+              SizedBox(
+                height: double.infinity,
+                width: double.infinity,
+                child: Lottie.network(
+                    'https://assets9.lottiefiles.com/packages/lf20_LOle4Y.json',
+                    fit: BoxFit.cover),
+              ),
+              Column(
+                children: [
+                  Expanded(
+                    child: Center(
+                      child: Text(
+                        'Sample Text',
+                        style: Theme.of(context)
+                            .textTheme
+                            .headline3
+                            ?.apply(fontWeightDelta: 4, color: Colors.white),
+                      ),
                     ),
                   ),
-                ),
-                Expanded(
-                  child: Align(
-                    alignment: Alignment.centerLeft,
-                    child: Image.network(
-                        'https://s3.ap-south-1.amazonaws.com/res.myhoggy.co/kizcastle/Courses/wash.png'),
+                  Expanded(
+                    child: Padding(
+                      padding: const EdgeInsets.all(8.0),
+                      child: Align(
+                        alignment: Alignment.centerLeft,
+                        child: Image.network(
+                            'https://cdn.pixabay.com/photo/2020/11/15/18/51/cat-5746875_1280.png'),
+                      ),
+                    ),
                   ),
-                ),
-                Expanded(
-                  child: Align(
-                    alignment: Alignment.center,
-                    child: Image.network(
-                        'https://s3.ap-south-1.amazonaws.com/res.myhoggy.co/kizcastle/Courses/exer.png'),
+                  Expanded(
+                    child: Padding(
+                      padding: const EdgeInsets.all(8.0),
+                      child: Align(
+                        alignment: Alignment.center,
+                        child: Image.network(
+                            'https://freesvg.org/img/Gerald-G-Cartoon-Cat-Walking.png'),
+                      ),
+                    ),
                   ),
-                ),
-                Expanded(
-                  child: Align(
-                    alignment: Alignment.centerRight,
-                    child: Image.network(
-                        'https://s3.ap-south-1.amazonaws.com/res.myhoggy.co/kizcastle/Courses/comb.png'),
+                  Expanded(
+                    child: Padding(
+                      padding: const EdgeInsets.all(8.0),
+                      child: Align(
+                        alignment: Alignment.centerRight,
+                        child: Image.network(
+                            'https://cdn.pixabay.com/photo/2021/02/11/16/22/cat-6005847_1280.png'),
+                      ),
+                    ),
                   ),
-                ),
-              ],
-            ),
-          ],
+                ],
+              ),
+            ],
+          ),
         ),
       ),
     );
