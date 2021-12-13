@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_lutie_practice/page1.dart';
+import '../core/constants.dart';
 
+import 'page1.dart';
 import 'page2.dart';
 
 class HomePage extends StatelessWidget {
@@ -29,7 +30,7 @@ class HomePage extends StatelessWidget {
                 padding:
                     const EdgeInsets.symmetric(horizontal: 35, vertical: 10),
                 child: Text(
-                  'Page 1',
+                  btn1,
                   style: Theme.of(context)
                       .textTheme
                       .headline5
@@ -54,7 +55,7 @@ class HomePage extends StatelessWidget {
                 padding:
                     const EdgeInsets.symmetric(horizontal: 35, vertical: 10),
                 child: Text(
-                  'Page 2',
+                  btn2,
                   style: Theme.of(context)
                       .textTheme
                       .headline5

@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_lutie_practice/core/constants.dart';
 import 'package:lottie/lottie.dart';
 
 class Page1 extends StatelessWidget {
@@ -11,7 +12,7 @@ class Page1 extends StatelessWidget {
         child: Container(
           decoration: const BoxDecoration(
             gradient: LinearGradient(
-              colors: [Color(0xFF0093E9), Color(0xFF80D0C7)],
+              colors: [color1, color2],
             ),
           ),
           child: Stack(
@@ -19,16 +20,14 @@ class Page1 extends StatelessWidget {
               SizedBox(
                 height: double.infinity,
                 width: double.infinity,
-                child: Lottie.network(
-                    'https://assets9.lottiefiles.com/packages/lf20_LOle4Y.json',
-                    fit: BoxFit.cover),
+                child: Lottie.network(bg1, fit: BoxFit.cover),
               ),
               Column(
                 children: [
                   Expanded(
                     child: Center(
                       child: Text(
-                        'Sample Text',
+                        text,
                         style: Theme.of(context)
                             .textTheme
                             .headline3
@@ -41,8 +40,7 @@ class Page1 extends StatelessWidget {
                       padding: const EdgeInsets.all(8.0),
                       child: Align(
                         alignment: Alignment.centerLeft,
-                        child: Image.network(
-                            'https://cdn.pixabay.com/photo/2020/11/15/18/51/cat-5746875_1280.png'),
+                        child: Image.network(cat1),
                       ),
                     ),
                   ),
@@ -51,8 +49,7 @@ class Page1 extends StatelessWidget {
                       padding: const EdgeInsets.all(8.0),
                       child: Align(
                         alignment: Alignment.center,
-                        child: Image.network(
-                            'https://freesvg.org/img/Gerald-G-Cartoon-Cat-Walking.png'),
+                        child: Image.network(cat2),
                       ),
                     ),
                   ),
@@ -61,8 +58,7 @@ class Page1 extends StatelessWidget {
                       padding: const EdgeInsets.all(8.0),
                       child: Align(
                         alignment: Alignment.centerRight,
-                        child: Image.network(
-                            'https://cdn.pixabay.com/photo/2021/02/11/16/22/cat-6005847_1280.png'),
+                        child: Image.network(cat3),
                       ),
                     ),
                   ),

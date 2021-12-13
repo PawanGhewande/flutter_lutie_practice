@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import '../core/constants.dart';
 import 'package:lottie/lottie.dart';
 
 class Page2 extends StatelessWidget {
@@ -11,7 +12,7 @@ class Page2 extends StatelessWidget {
         child: Container(
           decoration: const BoxDecoration(
             gradient: LinearGradient(
-              colors: [Color(0xFF0093E9), Color(0xFF80D0C7)],
+              colors: [color1, color2],
             ),
           ),
           child: Stack(
@@ -19,9 +20,7 @@ class Page2 extends StatelessWidget {
               SizedBox(
                 height: double.infinity,
                 width: double.infinity,
-                child: Lottie.network(
-                    'https://assets7.lottiefiles.com/packages/lf20_rebadwzb.json',
-                    fit: BoxFit.cover),
+                child: Lottie.network(bg2, fit: BoxFit.cover),
               ),
               Column(
                 children: [
@@ -32,7 +31,7 @@ class Page2 extends StatelessWidget {
                       children: [
                         Center(
                           child: Text(
-                            'Sample Text',
+                            text,
                             style: Theme.of(context).textTheme.headline2?.apply(
                                 fontWeightDelta: 4, color: Colors.white),
                           ),
@@ -45,22 +44,19 @@ class Page2 extends StatelessWidget {
                                 Expanded(
                                   child: Padding(
                                     padding: const EdgeInsets.all(30.0),
-                                    child: Image.network(
-                                        'https://s3.ap-south-1.amazonaws.com/res.myhoggy.co/kizcastle/Courses/comb.png'),
+                                    child: Image.network(img1),
                                   ),
                                 ),
                                 Expanded(
                                   child: Padding(
                                     padding: const EdgeInsets.all(30.0),
-                                    child: Image.network(
-                                        'https://s3.ap-south-1.amazonaws.com/res.myhoggy.co/kizcastle/Courses/exer.png'),
+                                    child: Image.network(img2),
                                   ),
                                 ),
                                 Expanded(
                                   child: Padding(
                                     padding: const EdgeInsets.all(30.0),
-                                    child: Image.network(
-                                        'https://s3.ap-south-1.amazonaws.com/res.myhoggy.co/kizcastle/Courses/wash.png'),
+                                    child: Image.network(img3),
                                   ),
                                 ),
                               ],
